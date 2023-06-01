@@ -1,0 +1,31 @@
+/* 
+修改转盘图片的样式
+1.水平居中
+标签若想居中显示,需要转化为块元素
+2.不停的旋转
+变形属性transform
+旋转rotate
+
+动画属性:animation
+1) 规定动画的名称 zhuan
+2) 规定动画的时间 3s
+3) 规定动画的播放次数(无限次infinite)
+4) 规定动画播放的速度(匀速linear)
+
+设置关键帧@keyframes
+ */
+
+img{
+	margin: 0 auto;
+	display: block;
+	/* 将元素转化为块元素 */
+	animation: zhuan 3s infinite linear;
+}
+@keyframes zhuan{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}

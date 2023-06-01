@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			let son = {
+				name : "hsh",
+				sex : "男",
+				age : "22",
+				num : "2333",
+				family : ["父","母","兄"]
+			}
+			console.log(son);
+			console.log(son.name);
+			console.log(son.family[2]);
+			console.log(son.family[0]=son.family[1]);
+			console.log(son.family);
+			let a = 1;
+			let b = "123.456";
+			let c = "123.4a56";
+			let d = "12a3.456";		
+			let e = "1";
+			let f = null;
+			let g;
+			let h = true;
+			let i = [1,2,3,4,5];
+			let j = {name : "str"};
+			let k = [];
+			let l = {};
+			// console.log(typeof(a+""))
+			// console.log(typeof(a.toString()))
+			// console.log(typeof(String(a)));
+			console.log(typeof(a));
+			console.log(Boolean(b));
+			console.log(Boolean (d));
+			console.log(Boolean(k));
+			console.log(Boolean(g));
+			console.log(Boolean(i));
+			console.log(Boolean(f));
+			console.log(Boolean(h));
+			console.log(Boolean(j));
+			let str1 = '123.456';
+			let str2 = '12a3.456';
+			let str3 = '123.4a56';
+			let str4 = 'a123.456';
+			// let num1 = parseInt(str1);
+			// let num1 = parseFloat(str1);
+			let num1 = Number(str1);
+			console.log(num1);
+			// let num2 = parseInt(str2);
+			// let num2 = parseFloat(str2);
+			let num2 = Number(str2);
+			console.log(num2);
+			// let num3 = parseInt(str3);
+			// let num3 = parseFloat(str3);
+			let num3 = Number(str3);
+			console.log(num3);
+			// let num4 = parseInt(str4);
+			// let num4 = parseFloat(str4);
+			let num4 = Number(str4);
+			console.log(num4)
+			let z = {name : `碳化硅`};
+			console.log(typeof(z));
+			console.log(z);
+			'use strict';
+			var age = 1;
+			if (age >= 60) {
+			    console.log('你好!老人');
+				document.write('你好!老人');
+				}else if(age<60,age>18){
+				console.log('你好!中年人');
+					document.write('你好,中年人');
+			} else if (age <= 18 , age>10) {
+			    console.log('你好!青年');
+				document.write('你好!青年');
+				} else {
+			    console.log('你好!小孩');
+				document.write('你好!小孩');
+			}
+			var height = parseFloat(prompt('请输入身高(m):'));
+			var weight = parseFloat(prompt('请输入体重(kg):'));
+			var bmi = weight / (height*height)
+			if(bmi < 18.5){
+				console.log("过轻");
+				document.write('过轻');
+			}else if(bmi>=18.5 , bmi<25){
+				console.log("正常");
+				document.write('正常');
+			}else if(bmi>=25 , bmi<32){
+				console.log("肥胖")
+				document.write('肥胖');
+			}else{
+				console.log("严重肥胖")
+				document.write('严重肥胖');
+			}
+			console.log("------------------------------");
+			var x = 0 ;
+			var o;
+			for (x * o ;o <= 10  ; o++) {
+			if (x === 3628800) {
+			    console.log('1 x 2 x 3 x ... x 10 = ' + x);
+			}
+			else {
+			    console.log('计算错误');
+			}
+			}
+			// name = "aaa";
+			// let name = "aaa";
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 

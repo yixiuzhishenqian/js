@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function normalize(arr) {
+			  return arr.map(function(a){
+				  return a[0].toUpperCase() + a.substring(1).toLowerCase()
+			  });
+			}
+			// 测试:
+			if (normalize(['adam', 'LISA', 'barT']).toString() === ['Adam', 'Lisa', 'Bart'].toString()) {
+			    console.log('测试通过!');
+			}else {
+			    console.log('测试失败!');
+			}
+			console.log('==========================================');
+			function product(arr) {
+				function sum(x , y){
+					return x * y;
+				}
+				let newarr = arr.reduce(sum);
+			    return newarr;
+			}
+			// 测试:
+			if (product([1, 2, 3, 4]) === 24 && product([0, 1, 2]) === 0 && product([99, 88, 77, 66]) === 44274384) {
+			    console.log('测试通过!');
+			}else {
+			    console.log('测试失败!');
+			}
+			console.log('==========================================');
+			function string2int(s) {	
+				let arr = s.split('')
+				let newarr = arr.map(item =>{
+					return +item;
+				});
+				return newarr.reduce((x , y)=>{
+					return x * 10 + y
+				})
+			}
+			// 测试:
+			if (string2int('0') === 0 && string2int('12345') === 12345 && string2int('12300') === 12300) {
+			    if (string2int.toString().indexOf('parseInt') !== -1) {
+			        console.log('请勿使用parseInt()!');
+			    } else if (string2int.toString().indexOf('Number') !== -1) {
+			        console.log('请勿使用Number()!');
+			    } else {
+			        console.log('测试通过!');
+			    }
+			}
+			else {
+			    console.log('测试失败!');
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

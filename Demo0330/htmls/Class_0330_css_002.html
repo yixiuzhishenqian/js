@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 标签名 */
+			p {
+				color: pink;
+				/* font-size: 32px; */
+			}
+
+			/* class属性值 : . 可以在一个属性中存在多个属性值 */
+			.ps {
+				color: #226fff;
+				/* font-size: 32px; */
+			}
+
+			.divps.ps {
+				color: #ff226f;
+				/* font-size: 32px; */
+			}
+
+			/* id属性值 : # 应该具有唯一性 */
+			#span1 {
+				color: darkgreen;
+				/* font-size: 32px; */
+			}
+
+			/* 全局选择器 */
+			* {
+				font-size: 16px;
+			}
+
+			/* 群组选择器 */
+			span.hasid {
+				color: #6fff22;
+			}
+
+			/* 顺位选择器 */
+			p:last-child {
+				text-decoration: underline;
+			}
+
+			p:first-child {
+				text-decoration: overline;
+			}
+
+			p:nth-child(2) {
+				text-decoration: line-through;
+			}
+
+			/* 层级选择器 */
+			/* 子元素 >大于号 */
+			#div1>p {
+				/* background-color: blueviolet; */
+			}
+
+			/* 后代元素 空格 */
+			#div1 p {
+				/* background-color: brown; */
+			}
+			/* 相邻同辈 ~ 波浪线 后面所有 */
+			#div1~* {
+				/* background-color: blueviolet; */ 
+			}
+			/* 紧邻同辈 + 加号 只有后面的一个 */
+			#div1+* {
+				background-color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="ps">我是段落1</p>
+		<p class="ps hasid" id="p1">我是段落2</p>
+		<div id="div1">
+			<p class="divps ps hasid" id="p2">我是段落3</p>
+			<p class="divps ps">我是段落4</p>
+			<p class="divps ps">我是段落5</p>
+			<div>
+				<p class="divps ps hasid" id="p3">我是段落8</p>
+				<p class="divps ps">我是段落9</p>
+				<p class="divps ps">我是段落10</p>
+				<p class="divps ps">我是段落11</p>
+				<p class="divps ps">我是段落12</p>
+			</div>
+			<p class="divps ps">我是段落6</p>
+			<p class="divps ps">我是段落7</p>
+		</div>
+		<span class="spans hasid" id="span1">我是行内元素1</span>
+		<span class="spans">我是行内元素2</span>
+		<span class="spans hasid" id="span2">我是行内元素3</span>
+	</body>
+</html>

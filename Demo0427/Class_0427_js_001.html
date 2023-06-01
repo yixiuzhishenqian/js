@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 数组-	Array
+			let arr = ['1', true, {
+				name: '安东'
+			}, null, undefined, 1, [1, 2, 3]]
+			console.log(arr);
+			console.log(arr[3])
+			arr[3] = 2
+			console.log(arr);
+			console.log(arr.length)
+			arr.length = 8
+			console.log(arr)
+			arr[9] = 'x'
+			console.log(arr)
+
+
+			let words = ['a', 'b', 'c', 'd', 'e', 'a', 'g'];
+			// indexof 
+			console.log(words.indexOf('a'))
+			// slice 截取数组
+			console.log(words.slice(1, 4))
+			let words2 = words.slice()
+			// 运行在浏览器上
+			// 内存
+			// 同一栋楼的房子 2803 2703
+			console.log(typeof(words2))
+			console.log(typeof(words))
+			console.log(words2 == words)
+			// push 向末尾添加
+			// pop 从末尾删除
+			words.push(5, '5')
+			console.log(words)
+			let s = words.pop()
+			console.log(words)
+			console.log(typeof(s))
+			// unshift 添加到开头
+			// shift   从开头删除
+			words.unshift(1, '1')
+			console.log(words)
+			let s1 = words.shift()
+			console.log(words)
+			console.log(typeof(s1))
+			// sort
+			numbers = [1, 5, 6, 4, 8, 9, 3, 2, 7]
+			// 倒序
+			numbers.sort((x, y) => {
+				return y - x;
+			})
+			console.log(numbers)
+			// 正序
+			numbers.sort((x, y) => {
+				return x - y;
+			})
+			console.log(numbers)
+			// reverse 反转
+			numbers.reverse()
+			console.log(numbers)
+			// splice  添加元素 删除元素 修改元素
+			// slice() 截取
+			words = ['a', 'b', 'c', 'd', 'e', 'a', 'g'];
+			// 删除
+			// words.splice(5, 1)
+			// console.log(words)
+			// 修改
+			// words.splice(5, 1, 'A' , 'B')
+			// console.log(words)
+			// 新增
+			// abcdeabcg
+			// words.splice(5, 1, 'a', 'b', 'c');
+			words.splice(6, 0, 'b', 'c');
+			console.log(typeof(words))
+			let str1 = words.join("汉字")
+			console.log(str1)
+			console.log(typeof str1)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

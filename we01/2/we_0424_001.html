@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			let a = new Map([['张三',11],['李四',22],['王五',33],['赵六',44]]);
+			let b = new Set([9,8,7,6,5,4,3,2,1,4,5,10]);
+			console.log(a);
+			a.set('老七',66);
+			b.add(15);			
+			console.log(a);
+			console.log(b);
+			a.set('张三',100);
+			b.add(3);
+			console.log(a);
+			console.log(b);
+			a.delete('赵六')
+			console.log(a);
+			b.delete(5);
+			console.log(b);
+			for(let i of a){
+				console.log(i[0] + '\t' +i[1]);
+			}
+			for(let j of b){
+				console.log(b)
+			}
+			console.log("==============================================")
+			a.forEach(function(v , v1){
+				console.log(v);
+				console.log(v1);
+			})
+			b.forEach(function(n){
+				console.log(n);
+			})
+			let arr =new Set (['Bart', 'Lisa', 'Adam']);
+			for(let t of arr){
+				console.log('Hello '+ t);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

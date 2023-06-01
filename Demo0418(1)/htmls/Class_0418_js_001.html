@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 绝对路径 -->
+		<!-- 相对路径 -->
+		<!-- 从我当前操作的文件出发,寻找目标资源 -->
+		<script src="../js/new_file.js"></script>
+		<script>
+			document.write('js 尽量在每一行的后面加上;<br>');
+			document.write('js严格区分大小写<br>');
+			document.write('js注释 //单行注释 /*多行注释*/<br>');
+			document.write('js 在声明变量时的关键字 var/let<br>');
+			document.write('js 变量名称的命名规则:<br>');
+			document.write('&nbsp;&nbsp;&nbsp;&nbsp;1.可以使用大小写英文 数字 $ _<br>');
+			document.write('&nbsp;&nbsp;&nbsp;&nbsp;2.不可以使用数字开头<br>');
+			document.write('&nbsp;&nbsp;&nbsp;&nbsp;3.不可以使用关键字<br>');
+			document.write('&nbsp;&nbsp;&nbsp;&nbsp;4.不要使用汉字<br>');
+			document.write('<br>');
+			document.write('= 在程序的代码中表示 赋值 而不是 数学中的等号<br>');
+			document.write('赋值 : 把等号左边的表达式赋值给等号右边的表达式<br>');
+			document.write('表达式 : 任意语句都可以是表达式,包括一个变量<br>');
+			document.write('<br>');
+			// 此时我们知道x是什么类型吗?
+			let x; // undefined 未定义
+			console.log(typeof(x))
+			x = 1; // number 数值
+			console.log(typeof(x))
+			x = '1'; // string 字符串
+			console.log(typeof(x))
+			x = true; // boolean 布尔
+			console.log(typeof(x))
+			x = null; // object 对象
+			console.log(typeof(x))
+			document.write('我们只有在赋值之后才能知道变量的类型<br>');
+			document.write('变量可以反复赋值,并且是不同数据类型的值<br>');
+			let str1 = '123';
+			let str2 = "123";
+			let str3 = `123`;
+			console.log(typeof(str1))
+			console.log(typeof(str2))
+			console.log(typeof(str3))
+			let b1 = true;
+			console.log(1 > 2)
+			console.log(1 < 2)
+			// 一些运算符
+			document.write('算术运算符 + - * / % ++ --<br>');
+			document.write('关系运算符 > >= < <= == != === !== <br>');
+			console.log('等于');
+			console.log(1 == 1); // true
+			console.log(1 == '1'); // true
+			console.log('不等于');
+			console.log(1 != 1); // false
+			console.log(1 != '1'); // false
+			console.log('1' != '1'); // false
+			// === 全等于
+			console.log('全等于');
+			console.log(1 === 1); // true
+			console.log(1 === '1'); // flase
+			// !== 全不等于
+			console.log('全不等于');
+			console.log(1 !== 1); // false
+			console.log(1 !== '1'); // true
+			console.log('1' !== '1'); // false
+			document.write('逻辑运算符 & | ! && ||<br>');
+			/* & 与 c = a & b 
+				a和b都是 关系表达式
+				当a与b的值都是true的时候
+				c的值才是true
+			*/
+			/* let x = 10;
+			let y = 1;
+			let z = x > 5 & y < 5; */
+
+			/*
+				&& 短路与  c = a && b 
+				a和b都是 关系表达式
+				当a与b的值都是true的时候
+				c的值才是true
+				如果a的值是false,则不执行后面的所有表达式
+			*/
+			let a = 10;
+			let b = 1;
+			// ++ 在前 先自增后运算
+			// 在后 ++ 先运算后自增
+			let c = a < 5 && b++ < 5;
+			// let c = a < 5 & b++ < 5;
+			console.log(c);
+			console.log(b);
+
+			/*
+				| 或 c = a | b
+				a和b都是 关系表达式
+				当a与b的值只要有一个是是true的时候
+				c的值就是true
+			*/
+
+			/*
+				| 或 c = a || b
+				a和b都是 关系表达式
+				当a与b的值只要有一个是是true的时候
+				c的值就是true
+				如果a的值是true,则不执行后面的所有表达式
+			*/
+
+			/*
+				! 非
+				!真即假
+				!true => false
+				!假即真
+				!false => true
+		   */
+			let d = a > 5 && b < 5;
+			console.log(!d);
+			document.write('赋值运算符 = += -= *= /= %=<br>');
+			a += 10;
+			// a = a + 10;
+			console.log(a); // 20
+			a -= 10;
+			// a = a - 10;
+			console.log(a); // 10
+			a *= 10;
+			console.log(a); // 100
+			a /= 5;
+			console.log(a); // 20
+			a %= 2;
+			console.log(a); // 0
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

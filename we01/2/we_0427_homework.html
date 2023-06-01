@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function normalize(arr) {
+				return arr.map(function(a){
+					return a[0].toUpperCase() + a.substring(1).toLowerCase();
+				})
+			}
+			// 测试:
+			if (normalize(['adam', 'LISA', 'barT']).toString() === ['Adam', 'Lisa', 'Bart'].toString()) {
+			    console.log('测试通过!');
+			}else {
+			    console.log('测试失败!');
+			}
+			console.log("=========================================");
+			function product(arr) {
+				function sum(x , y){
+					return x * y;
+				}
+				arr1 = arr.reduce(sum)
+			    return arr1;
+			}
+			// 测试:
+			if (product([1, 2, 3, 4]) === 24 && product([0, 1, 2]) === 0 && product([99, 88, 77, 66]) === 44274384) {
+			    console.log('测试通过!');
+			}else {
+			    console.log('测试失败!');
+			}
+			console.log("==========================================");
+			
+			function string2int(s) {
+			  let a = s.split('');
+			  console.log(typeof(a[0]))
+			  if(a === '0'){
+				  return 0;
+			  }else{
+				  function sum(x,y){
+					  return x + y;
+				  }
+				  let b = a.reduce(sum)
+				  let c = parseFloat((b))
+				  return c
+			  }
+			}
+			// 测试:
+			if (string2int('0') === 0 && string2int('12345') === 12345 && string2int('12300') === 12300) {
+				if (string2int.toString().indexOf('parseInt') !== -1) {
+					console.log('请勿使用parseInt()!');
+				} else if (string2int.toString().indexOf('Number') !== -1) {
+					console.log('请勿使用Number()!');
+				} else {
+					console.log('测试通过!');
+				}
+			}
+			else {
+				console.log('测试失败!');
+			}
+			console.log("================================")
+			let s = "Homework"
+			let x = s.split('')
+			x.reverse();
+			// console.log(x)
+			function sum(x,y){
+				return x + y;
+			}
+			let y = x.reduce(sum)
+			console.log(y)
+			console.log(parseFloat("0"))
+			console.log(parseInt("0"))
+			console.log(Number("0"))
+			
+			var arr = ['1', '2', '3'];
+			var r;
+			r = arr.map(Number);
+			console.log(r);
+			
+			
+			var arr5 = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+			var aCopy = arr5.slice();
+			aCopy; // ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+			aCopy === arr;
+			console.log(arr5)
+			console.log(aCopy)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

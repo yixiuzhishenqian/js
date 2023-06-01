@@ -1,0 +1,79 @@
+/* 样式1:修改图像大小
+宽度属性:width
+高度属性:height
+边框属性:
+border: 宽度 颜色 线型;
+实线:solid
+虚线:dashed
+点线:dotted
+没有线:none
+*/
+
+/* 过度属性 */
+img{
+	width: 200px;
+	height: 350px;
+	transition: 1s;
+}
+
+/* 标签选择器:同时修改相同名字的标签 */
+
+.img1{
+	border: 5px red solid;
+	margin-top: 70px;
+	margin-left: 70px;
+}
+.img2{
+	border: 5px green solid;
+	margin-top: 70px;
+	margin-left: 70px;
+}
+.img3{
+	border: 5px blue solid;
+	margin-top: 70px;
+	margin-left: 70px;
+}
+
+/* 类选择器:单独修改类(class)名的标签,用.class名表示 */
+/* 
+动态效果:
+1.图像大小
+2.边框颜色
+3.圆角边框 border-radius
+4.绿色阴影
+box-shadow:水平阴影 垂直阴影 模糊程度 大小 颜色;
+5.变形-缩放
+transform:scale()
+ */
+.img1:hover{
+	/* width: 260px;
+	height: 450px; */
+	border: 5px yellow  solid;
+	border-radius: 50px;
+	box-shadow: 30px 30px 20px 10px green;
+	transform: scale(1.2);
+}
+.img2:hover{
+	/* width: 260px;
+	height: 450px; */
+	border: 5px pink  solid;
+	border-radius: 50px;
+	box-shadow: 30px 30px 20px 10px green;
+	transform: scale(1.2);
+}
+.img3:hover{
+	/* width: 260px;
+	height: 450px; */
+	border: 5px purple solid;
+	border-radius: 50px;
+	box-shadow: 30px 30px 20px 10px green;
+	transform: scale(1.2);
+}
+
+/* 伪类选择器:不再去修改标签的样式,而是修改标签的状态,用冒号:表示
+ 
+ 鼠标划过时    :hover
+ */
+/* 需要调整标签的位置:
+使用外边距   margin-方向词    属性 */
+

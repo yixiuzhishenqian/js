@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function V(){
+				console.log( 5 * 5 * 8);//无参无反
+			}
+			V();
+			console.log("===============================================");
+			function V1(a , b){
+				console.log(a * a * b);//有参无反
+			}
+			V1(5 , 10);
+			console.log("===============================================");
+			function V2(){
+				return(5 * 5 * 8)//无参有反
+			}
+			console.log(V2());
+			console.log("===============================================");
+			function V3(a , b , ...rest){
+				console.log(rest);
+				console.log(arguments);//有参有返
+				return(a * a * b);
+			}
+			console.log(V3(5 ,8 , 10 , 90));
+			console.log("{{{{{{{{{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}}}}}}}}}")
+			function s(a , b){
+				console.log(a * b / 2);//有参无反
+			}
+			s(3 , 4);
+			console.log("?????????????????????????????????????????????????");
+			function s1(){
+				console.log( 3 * 4 / 2)//无参无反
+			}
+			s1();
+			console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
+			function s2(a , b , ...rest){
+				console.log(arguments)//有参有返
+				console.log(rest);
+				return(a * b / 3);
+			}
+			console.log(s2(10 , 12432 , 5 , 6 , 7 ));
+			console.log("{{{{{{{{{{{}}}}}}}{{{{{{{{{}}}}}}}}}}}}}}}}}}}}}}}}}");
+			function s3(){
+				return(3 * 4 / 2);//无参有反
+			}
+			console.log(s3());
+			console.log(arguments)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

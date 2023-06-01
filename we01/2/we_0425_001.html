@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+		function a(x , y ,...rest){
+			console.log(rest);
+			console.log(arguments);
+			console.log(x * y / 2);
+		}	
+		a(3,5,7,9);
+		console.log("''''''''''''''''''''''''''''''''''''''''''''''''");
+		function a1(){
+			console.log(3 * 5 / 2);
+		}
+		a1();
+		console.log('""""""""""""""""""""""""""""""""""""""""""""""""');
+		function a2(){
+			return(3 * 5 / 2);
+		}
+		console.log(a2());
+		console.log(":::::::::::::::::::::::::::::::::::::::::::::::::");
+		function a3(x , y ,...rest){
+			console.log(arguments);
+			console.log(rest);
+			return(x * y / 2);
+		}
+		console.log(a3(3 , 5 , 7 , 8));
+		console.log("||||||||||||||||||||||||||||||||||||||||||||||||||");
+		let b = new Map([["小王",5500],["小张",6000],["小李",8000],["小花",20000]]);
+		for(let a of b){
+			console.log("姓名:"+a[0] + '\t' + "工资:" +a[1]);
+		}
+		</script>	
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 函数的定义
+			/* 
+				function 函数定义的关键字,不改变
+				函数名    不要有中文,符合命名规则
+				函数的参数 可以没有,也可以有多个,参数和参数之间使用 逗号 分隔
+				函数体		可以没有,也可以有多行,每一个语句之后,使用 分号 结尾
+				return		return语句 可以没有,也可以有,用途是返回我们指定的数据
+				
+				function 函数名(函数的参数){
+					函数体
+					[return 表达式]
+				}
+			*/
+			// 函数的声明
+			// 1. 无参数 无返回值函数
+			// function area_of_circle1(){
+			// 	console.log(3.14 * 5 * 5);
+			// }
+			// 函数的调用
+			// area_of_circle1();
+
+			// 2. 有参数 无返回值函数
+			// function area_of_circle2(r) {
+			// 	console.log(3.14 * r * r);
+			// }
+			// 函数的调用
+			// area_of_circle2(5)
+			// 2. 有参数 无返回值函数
+			// function area_of_circle3(pi, r) {
+			// 	console.log(pi * r * r);
+			// }
+			// 函数的调用
+			// area_of_circle3(3.14, 5)
+
+			// 3. 无参数 有返回值函数
+			// function area_of_circle4(){
+			// 	return 3.14 * 5 * 5;
+			// }
+			// 函数的调用
+			// console.log(area_of_circle4());
+
+			// 4. 有参数 有返回值函数
+			// function area_of_circle5(pi, r) {
+			// 	return pi * r * r;
+			// }
+			// 函数的调用
+			// console.log(area_of_circle5(3.14, 5))
+
+
+			// arguments
+			// rest
+			// 有参数 无返回值函数
+			function area_of_circle6(pi, r, ...rest) {
+				console.log("pi = " + pi);
+				console.log("r = " + r);
+				console.log(arguments) // 获取所有的参数
+				console.log(rest)// 获取剩余的参数
+			}
+			// 函数的调用
+			area_of_circle6(5, 8, 10, 20);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

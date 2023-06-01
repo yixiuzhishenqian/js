@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<textarea id="content" rows="15" cols="40"></textarea>
+		<input type="button" id="publish" value="发布">
+		<table>
+			<tr id="firstrow">
+				<th>
+					<input type="checkbox" id="ck">
+				</th>
+				<th>编号</th>
+				<th>内容</th>
+				<th>发布时间</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="cks" />
+				</td>
+				<td>1</td>
+				<td>矿山救护队快速导航</td>
+				<td>2023-04-03 16:44:00</td>
+				<td>
+					<input type="button" value="删除" class="del" onclick="">
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		let id = 1;
+		// 获取发布按钮
+		publish = document.getElementById("publish")
+		// 绑定点击事件
+		publish.onclick = function() {
+			// 创建tr
+			tr = document.createElement("tr")
+			// 创建五个td
+			td1 = document.createElement("td")
+			td2 = document.createElement("td")
+			td3 = document.createElement("td")
+			td4 = document.createElement("td")
+			td5 = document.createElement("td")
+			// 创建第一个td中的复选框
+			input_checkbox = document.createElement("input")
+			// 设置属性
+			input_checkbox.setAttribute("type","checkbox")
+			input_checkbox.setAttribute("class","cks")
+			td1.append(input_checkbox)
+			// 自增id 放入第二个td中
+			td2.append(++id)
+			// 将我们输入的内容放入第三个td中
+			content = document.getElementById("content")
+			td3.append(content.value)
+			// 获取系统时间,按照格式放入第四个td中
+			td4.append(getDate())
+			// 创建删除按钮,放入第五个td中
+			input_delete = document.createElement("input")
+			input_delete.setAttribute("type","button")
+			input_delete.setAttribute("value","删除")
+			input_delete.setAttribute("class","del")
+			input_delete.setAttribute("onclick","")
+			td5.append(input_delete)
+			// 将五个td 全部放入tr中
+			tr.append(td1,td2,td3,td4,td5)
+			console.log(tr)
+			// 将创建的tr 放入第一个tr的下方
+			fr = document.getElementById("firstrow")
+			fr.after(tr)
+		}
+
+		function getDate() {
+			let date = new Date();
+			let year = date.getFullYear();
+			let month = date.getMonth() + 1;
+			let day = date.getDate();
+			let hour = date.getHours();
+			let min = date.getMinutes();
+			let sec = date.getSeconds();
+			return year + '-' + (month < 10 ? '0' + month : month)+ '-' + (day < 10 ? '0' + day : day)+ ' ' + (hour < 10 ? '0' + hour : hour)+ ':' + (min < 10 ? '0' + min : min)+ ':' + (sec < 10 ? '0' + sec : sec)
+		}
+	</script>
+</html>

@@ -1,0 +1,57 @@
+/* 修改文字样式
+ 1.文字放大 font-size:12px;
+ 2.修改文字颜色 color
+ 3.水平居中 margin:0 auto;
+ 4.文字阴影 
+ text-shadow:水平阴影 垂直阴影 模糊程度 阴影大小 颜色;
+ */
+p{
+	color: skyblue;
+	font-size: 150px;
+	width: 370px;
+	font-weight: 600;
+	margin: 0 auto;
+	/* text-shadow: 5px 5px 5px red; */
+	animation: font 0.5s infinite linear;
+}
+/* 
+动画属性:animation
+1) 规定动画的名称 font
+2) 规定动画的时间 3s
+3) 规定动画的播放次数(无限次infinite)
+4) 规定动画播放的速度(匀速linear)
+ */
+
+.span1{
+	font-size: 150px;
+	font-weight: 600;
+	margin-left: 60px;
+	animation: span 0.5s infinite linear;
+	position: absolute;
+}
+.span2{
+	font-size: 150px;
+	font-weight: 600;
+	margin-left: 500px;
+	animation: span 0.5s infinite linear;
+	position: absolute;
+}
+@keyframes span{
+	0%{
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(-2deg);
+	}
+	50%{
+		transform: rotate(0deg);
+	}
+	75%{
+		transform: rotate(-2deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+

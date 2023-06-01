@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// id选择器 #div123
+			// &
+			// &&	
+			// js数据类型
+			// 数值 字符串 布尔 对象
+			// tpye="radio"
+			// 声明变量的关键字 
+			// var let
+			
+			// 一个变量在没有赋值的时候,进行了使用,结果就是undefined
+			let x;
+			console.log(x);
+			let y = null;
+			console.log(y);
+			
+			// js 中的数据
+			// 可以存放多个变量
+			// 变量的类型可以不同
+			// 使用中括号表示,中括号中的数据被称为数组的元素
+			// 通过索引操作元素,赋值和获取值
+			// 索引从0开始
+			
+			let arr = [1,'2',3.14,null,true];
+			console.log(arr[0])
+			console.log(arr[2])
+			arr[5] = '中文'
+			console.log(arr[5])
+			// 数组的长度 length属性
+			console.log(arr.length)
+			
+			// 对象
+			// {}
+			// 键值对
+			// name : '安东'
+			// key 键 name
+			// value 值 '安东'
+			let person = {
+				name : '安东',
+				sex : '男',
+				age : 33,
+				isPerson : true,
+				family : ['母亲','老婆','儿子'],
+				cars : {
+					first : 'suv',
+					second : 'moto'
+				},
+				33 : '1'
+			}
+			console.log(person)
+			console.log(person.name)
+			// 获取不存在的键值时 返回undefined
+			console.log(person.name1)
+			console.log(person.family[1]);
+			console.log(person.cars.first);
+			let a = 1;
+			console.log(typeof(a))
+			// console.log(3 = 3);
+			var arr1 = [0,1,2,3,4];
+			console.log(arr1[1]+arr1[2]);
+			console.log(arr1[1] = arr1[2]);
+			console.log(arr1);
+			console.log(arr1[0] = arr1.length);
+			// [5,2,2,3,4]
+			let age = 33;
+			console.log(person[age])
+		</script>
+	</head>
+	<body>
+		<div id="div123">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			let arr = ['a','b','f','d','g','j','d'];
+			let a = [,4,3,5,1,5,8,9,0,2,7,6]
+			console.log(arr)
+			arr.push("w")
+			console.log(arr)
+			arr.pop()
+			console.log(arr)
+			arr.shift()
+			console.log(arr)
+			arr.unshift("w")
+			console.log(arr)
+			arr1 = arr.slice()
+			arr.splice(4,2,"G","J")
+			console.log(arr)
+			console.log(arr1)
+			console.log(a)
+			a.sort((x , y)=>{
+				return x-y;
+			})
+			console.log(a)
+			a.sort((x , y)=>{
+				return y-x;
+			})
+			// console.log(a)
+			// let c = 'margin'
+			// let d = a.join("")
+			// let d = a.join("'")
+			let d = a.join(" \t ")
+			console.log(d)
+			console.log(arr)
+			let date = new Date();
+			let year = date.getFullYear()
+			console.log(year)
+			let month = date.getMonth();
+			console.log(month)
+			let day = date.getDate();
+			console.log(day)
+			let hour = date.getHours();
+			console.log(hour)
+			let min = date.getMinutes();
+			console.log(min)
+			let se = date.getSeconds();
+			console.log(se)
+			let ms = date.getMilliseconds();
+			console.log(ms)
+			console.log(year + "年" + month + "月" + day + "日" + hour + min + se + ms)
+			let num = ['15567055555','13145862444'];
+			let sun = [{'name':'张三','age':99,'sex':'女','family':'monther,wife,son'},{'name':'李四','age':22,'sex':'女','family':'father,mother,wife'}]
+			console.log(sun)
+			let sun1 = JSON.stringify(sun)
+			console.log(sun1)
+			console.log(num)
+			let sum1 = JSON.stringify(num)
+			console.log(sum1)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

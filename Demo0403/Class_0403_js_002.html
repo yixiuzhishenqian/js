@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.num,#back,#eq,#clear {
+				width: 45px;
+				height: 30px;
+				margin: 5px 0 0 7px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- BOM -->
+		<!-- Browser Object Model -->
+		<!-- DOM -->
+		<!-- Document Object Model -->
+		<!-- 创建元素 删除元素 设置属性 设置css样式 -->
+		<!-- 1. 获取页面元素 -->
+		<!-- 2. 点击事件的触发 -->
+		<!-- 3. 常用的元素属性 -->
+		<!-- 4. 函数的定义和调用 -->
+		<input type="text" id="result"><br>
+		<input type="button" value="1" class="num" onclick="inputNum(this)">
+		<input type="button" value="2" class="num" onclick="inputNum(this)">
+		<input type="button" value="3" class="num" onclick="inputNum(this)"><br>
+		<input type="button" value="4" class="num" onclick="inputNum(this)">
+		<input type="button" value="5" class="num" onclick="inputNum(this)">
+		<input type="button" value="6" class="num" onclick="inputNum(this)"><br>
+		<input type="button" value="7" class="num" onclick="inputNum(this)">
+		<input type="button" value="8" class="num" onclick="inputNum(this)">
+		<input type="button" value="9" class="num" onclick="inputNum(this)"><br>
+		<input type="button" value="0" class="num" onclick="inputNum(this)">
+		<input type="button" value="+" class="num" onclick="inputNum(this)">
+		<input type="button" value="-" class="num" onclick="inputNum(this)"><br>
+		<input type="button" value="*" class="num" onclick="inputNum(this)">
+		<input type="button" value="/" class="num" onclick="inputNum(this)">
+		<input type="button" value="%" class="num" onclick="inputNum(this)"><br>
+		<input type="button" value="清空" id="clear">
+		<input type="button" value="退格" id="back">
+		<input type="button" value="等于" id="eq">
+	</body>
+	<script>
+		result = document.getElementById("result")
+		let str = "";
+		// 点击按钮 能将点击的数据 放入输入框中
+		function inputNum(e){
+			str += e.value;
+			result.value = str;
+		}
+		// 清空
+		clear = document.getElementById("clear")
+		clear.onclick = function (){
+			str = ""
+			result.value = str;
+		}
+		
+		// 等于
+		eq = document.getElementById("eq")
+		eq.onclick = function (){
+			str += "=" + eval(str)
+			result.value = str;
+		}
+		
+		// 等于
+		back = document.getElementById("back")
+		back.onclick = function (){
+			// 截取字符串
+			// 1+2
+			str = str.substring(0,str.length-1)
+			result.value = str;
+		}
+	</script>
+</html>

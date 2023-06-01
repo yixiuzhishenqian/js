@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!-- 以body作为父元素时，不能设置百分比高度，因为body默认没有高度 -->
+	<body>
+		<!-- 相对路径 : 从当前操作的文件开始寻找 -->
+		<img id="p0" src="../imgs/4c2e2c90e8235f5b406324a9c05f14a3.jpeg" title="高楼大厦" height="50%"/>
+		<img id="p1" src="a9874dcd94fa813cef0c7389cb9532ca.jpeg"/>
+		<img id="p2" src="../imgs/4c2e2c90e8235f5b406324a9c05f14a3.jpeg" title="高楼大厦" height="50%"/>
+		<img id="p3" src="a9874dcd94fa813cef0c7389cb9532ca.jpeg"/>
+		<img id="p4" src="../imgs/4c2e2c90e8235f5b406324a9c05f14a3.jpeg" title="高楼大厦" height="50%"/>
+		<img id="p5" src="a9874dcd94fa813cef0c7389cb9532ca.jpeg"/>
+		<img id="p6" src="../imgs/4c2e2c90e8235f5b406324a9c05f14a3.jpeg" title="高楼大厦" height="50%"/>
+		<img id="p7" src="a9874dcd94fa813cef0c7389cb9532ca.jpeg"/>
+		<!-- 绝对路径 ：从磁盘根目录开始寻找 -->
+		<img src="D:\HBuilderProjects\Demo0328\imgs/4c2e2c90e8235f5b406324a9c05f14a3.jpeg" alt="图片加载失败"/>
+		
+		<a href="new_file.html" target="_blank">点我跳转</a>
+		<a href="https://baidu.com" target="_blank">点我跳转百度</a>
+		<a href="new_file.html" target="_blank">
+			<img <img src="../imgs/4c2e2c90e8235f5b406324a9c05f14a3.jpeg" title="高楼大厦" height="50px"/>
+		</a>
+		<a href="#p3">跳转到第四张图</a>
+		<a href="#" target="_top">回到页首</a>
+	</body>
+</html>

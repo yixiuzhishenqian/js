@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* id选择器 是唯一的 所以不能有重复的值 */
+			#div1 {
+				border: 2px black solid;
+			}
+			/* class选择器 */
+			.ipt-text {
+				background-color: beige;
+			}
+			/* 标签选择器 */
+			/* input {
+				width: 250px;
+			} */
+			/* 后代选择器 空格 */
+			/* #div1 input{
+				width: 250px;
+			} */
+			/* 子元素选择器 大于号 */
+			/* #div1>input {
+				width: 250px;
+			} */
+			/* 紧邻同辈元素选择器 加号 */
+			/* #p1+input {
+				width: 250px;
+			} */
+			/* 相邻同辈元素选择器 波浪线 */
+			/* #p1~input {
+				width: 250px;
+			} */
+		</style>
+	</head>
+	<body>
+		电脑名称不要使用中文
+		和程序 代码相关的路径不要包含中文
+		文件名尽量不要使用中文
+		类 方法 属性名称不要使用中文
+		如果一个软件 默认就没有中文 尽量不要使用插件自己安装中文
+		<div id="div1">
+			2023年4月18日09:19:24
+			<!-- action 表单提交的地址 -->
+			<!-- 
+				method 表单提交的方式
+				http协议
+				get		默认提交方式
+				post
+				put
+				delete
+			-->
+			<form action="Class_0418_001.html" method="get">
+				<!-- 文本框 -->
+				文本框:<input type="text" class="ipt-text" id="username" name="username"><br>
+				<!-- 密码框 -->
+				密码框:<input type="password" class="ipt-text" id="password"><br>
+				<!-- 单选框 -->
+				单选框:<input type="radio" class="ipt-text gender" name="gender">男
+				<input type="radio" class="ipt-text gender" name="gender">女<br>
+				<!-- 复选框 -->
+				复选框:<input type="checkbox" class="ipt-text hobby">抽烟
+				<input type="checkbox" class="ipt-text hobby">喝酒
+				<input type="checkbox" class="ipt-text hobby">烫头<br>
+				<!-- 下拉菜单 -->
+				下拉菜单:<select class="address" id="address" class="ipt-text">
+					<option>北京</option>
+					<option value="shanghai">上海</option>
+					<option>广州</option>
+					<option>深圳</option>
+				</select><br>
+				<!-- 文本域 -->
+				文本域:<textarea rows="15" cols="35" id="content" class="ipt-text content"></textarea><br>
+				<!-- 普通按钮 -->
+				普通按钮:<input type="button" value="普通" id="btn">
+				<!-- 重置按钮 -->
+				重置按钮:<input type="reset" value="reset">
+				<!-- 提交按钮 -->
+				提交按钮:<input type="submit" value="submit">
+			</form>
+			在外面的复选框:<input type="checkbox" class="ipt-text hobby">somking
+			<span id="p1">123456789</span>
+			<input type="checkbox" class="ipt-text hobby">drink
+			<input type="checkbox" class="ipt-text hobby">hothear<br>
+		</div>
+	</body>
+</html>

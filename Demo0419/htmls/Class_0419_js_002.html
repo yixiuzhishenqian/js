@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 数据类型转换
+			// number
+			// 		NaN => not a number
+			// string
+			// boolean
+			// object
+			// 		null => 空
+			// 		Array => 数组
+			// undefined
+			// 其他数据类型转string
+			let x = 1;
+			console.log(typeof x)
+			let y = true;
+			console.log(typeof y)
+			let obj1 = {name:'安东'};
+			console.log(typeof obj1)
+			let obj2 = null;
+			console.log(typeof obj2)
+			let arr = [1,2,3];
+			console.log(typeof arr)
+			console.log("-------------------------")
+			// 1. 直接使用+号拼接'' "" ``
+			console.log(typeof(x+''))
+			console.log(typeof(y+""))
+			console.log(typeof(obj1+''))
+			console.log(typeof(obj2+''))
+			console.log(typeof(arr+``))
+			console.log("-------------------------")
+			// 2. 变量名.toString()
+			console.log(typeof(x.toString()))
+			console.log(typeof(y.toString()))
+			console.log(typeof(obj1.toString()))
+			// null.toString() 会造成空指针
+			// console.log(typeof(obj2.toString()))
+			console.log(typeof(arr.toString()))
+			console.log("-------------------------")
+			// 3. String(变量)
+			let sx = String(x)
+			console.log(typeof(sx))
+			console.log(typeof(String(y)))
+			console.log(typeof(String(obj1)))
+			console.log(typeof(String(obj2)))
+			console.log(typeof(String(arr)))
+			console.log("-------------------------")
+			// 字符串类型转换成数值类型
+			let str1 = '123.456';
+			let str2 = '12a3.456';
+			let str3 = '123.4a56';
+			let str4 = 'a123.456';
+			// 1. 只能转整数 parseInt(变量)
+			// 遇到不能识别的就停止转换
+			// 如果第一个字符就不能识别则返回NaN
+			let num1 = parseInt(str1);
+			let num2 = parseInt(str2);
+			let num3 = parseInt(str3);
+			let num4 = parseInt(str4);
+			console.log("-------------------------")
+			console.log(num1); // 123
+			console.log(num2); // 12
+			console.log(num3); // 123
+			console.log(num4); // NaN
+			console.log("-------------------------")
+			// 2. 能转整数和浮点数 parseFloat(变量)
+			let flo1 = parseFloat(str1);
+			let flo2 = parseFloat(str2);
+			let flo3 = parseFloat(str3);
+			let flo4 = parseFloat(str4);
+			console.log(flo1); // 123.456
+			console.log(flo2); // 12
+			console.log(flo3); // 123.4
+			console.log(flo4); // NaN
+			console.log("-------------------------")
+			// 3. 能转整数和浮点数 Number(变量)
+			let n1 = Number(str1);
+			let n2 = Number(str2);
+			let n3 = Number(str3);
+			let n4 = Number(str4);
+			console.log(n1); // 123.456
+			console.log(n2); // NaN
+			console.log(n3); // NaN
+			console.log(n4); // NaN
+			console.log("-------------------------")
+			// 其他类型转布尔
+			let nn1 = 123;
+			let nn2 = 456;
+			let nn3 = 0;
+			let nn4;
+			console.log(Boolean(nn1)); // true
+			console.log(Boolean(nn2)); // true
+			console.log(Boolean(nn3)); // false
+			console.log(Boolean(nn4)); // false
+			console.log("-------------------------")
+			let ss1 = '1kjsdhk';
+			let ss2 = "1kjsdhk";
+			let ss3 = `1kjsdhk`;
+			let ss4 = '';
+			let ss5 = "";
+			let ss6 = ``;
+			let ss7;
+			console.log(Boolean(ss1)); // true
+			console.log(Boolean(ss2)); // true
+			console.log(Boolean(ss3)); // true
+			console.log(Boolean(ss4)); // false
+			console.log(Boolean(ss5)); // false
+			console.log(Boolean(ss6)); // false
+			console.log(Boolean(ss7)); // false
+			console.log("-------------------------")
+			let oo1 = {name:'1'};
+			let oo2 = {};
+			let oo3 = null;
+			let oo4;
+			console.log(Boolean(oo1)); // true
+			console.log(Boolean(oo2)); // true
+			console.log(Boolean(oo3)); // false
+			console.log(Boolean(oo4)); // false
+			console.log("-------------------------")
+			let aa1 = [1,2,3,4,5];
+			let aa2 = [];
+			let aa3 = null;
+			let aa4;
+			console.log(Boolean(aa1)); // true
+			console.log(Boolean(aa2)); // true
+			console.log(Boolean(aa3)); // false
+			console.log(Boolean(aa4)); // false
+			console.log("-------------------------")
+			
+			// 数值转布尔 非0 非undefined 非null即为 true
+			// 字符串转布尔 非空字符串 非undefined 非null 即为true
+			// 对象转布尔 非null 非undefined 即为true
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

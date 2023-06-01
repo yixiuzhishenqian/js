@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 声明map类型变量
+			// key : value
+			// 键	 值
+			let source = new Map([['张三', 99],['李四', 68],['王五', 77]]);
+			let m = new Map();
+			
+			console.log(source)
+			console.log(m)
+			
+			// map中的操作
+			// set 放数据
+			source.set('赵六', 30)
+			// get 获取数据
+			console.log(source.get('李四'))
+			// delete 删除数据
+			source.delete('王五')
+			console.log(source.get('王五')) // undefined
+			// has	判断key是否存在
+			console.log(source.has(1))// false
+			console.log(source.has('李四'))// true
+			console.log(source.has('王五'))// false
+			// key 具有唯一性
+			source.set('张三', 88)
+			console.log(source)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

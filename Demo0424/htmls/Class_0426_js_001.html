@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function pow(x) {
+				return x * x;
+			}
+
+			function sum(x, y) {
+				return x * 10 + y;
+			}
+
+			// 声明数组
+			// 1 * 10 + 2 => 10 + 2
+			// 12 * 10 + 3 => 120 + 3
+			// 123 * 10 + 4 => 1230 + 4
+			// 1234 * 10 + 5 => 12340 + 5
+			// 123456789
+			let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+			// 使用高阶函数 map
+			// Map 
+			let newArr1 = arr.map(x => x * x)
+			let newArr2 = arr.reduce(sum);
+			console.log(newArr1)
+			console.log(newArr2)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
